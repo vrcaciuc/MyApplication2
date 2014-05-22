@@ -17,6 +17,9 @@ public class Splash extends Activity {
                 try{
                     sleep(1000);
 
+
+
+
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -17,26 +17,24 @@
         android:gravity="center"
         android:id="@+id/tvDisplay"
 
-    />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Add one &#xA; "
-        android:includeFontPadding="false"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_centerHorizontal="true"
+        android:text="Add one "
         android:textSize="20dp"
         android:id="@+id/badd"
-        android:layout_below="@+id/tvDisplay"
-        android:layout_alignLeft="@+id/bsub"
-        android:layout_alignStart="@+id/bsub" />
+        android:layout_above="@+id/bsub"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Subtract one &#xA; "
+        android:text="Subtract one"
         android:layout_gravity="center"
         android:textSize="20dp"
         android:id="@+id/bsub"
-        android:layout_below="@+id/badd"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
