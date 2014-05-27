@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ua.edu.myapplication2.app" >
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -20,9 +21,30 @@
             android:name="ua.edu.myapplication2.app.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="ua.edu.myapplication2.app.MAINACTIVITY" />
+                <action android:name="ua.edu.myapplication2.app.MainActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="ua.edu.myapplication2.app.Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="ua.edu.myapplication2.app.Menu" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ua.edu.myapplication2.app.TextPlay"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="ua.edu.myapplication2.app.Email"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Camera"
+            android:screenOrientation="portrait"
+            android:label="Camera Application" >
         </activity>
     </application>
 

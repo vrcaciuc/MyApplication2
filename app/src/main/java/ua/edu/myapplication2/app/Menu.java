@@ -12,7 +12,7 @@ import android.widget.ListView;
  */
 public class Menu extends ListActivity {
 
-    String classes[] = { "MainActivity", "example1", "example2", "example3", "example4", "example5", "example6"};
+    String classes[] = { "MainActivity", "TextPlay", "Email", "Camera", "example4", "example5", "example6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,13 @@ public class Menu extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Class ourClass = Class.forName("ua.edu.myapplication2.app.MAINACTIVITY");
-        Intent ourIntent = new Intent(Menu.this, ourClass);
-        startActivity(ourIntent);
+        String cheese = classes[position];
+        try {
+            Class ourClass = Class.forName(getString(R.string.app_package_name) + cheese);
+            Intent ourIntent = new Intent(Menu.this, ourClass);
+            startActivity(ourIntent);
+        }catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
     }
 }
