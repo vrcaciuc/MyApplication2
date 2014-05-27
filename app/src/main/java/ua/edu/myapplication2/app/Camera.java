@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -30,8 +31,8 @@ public class Camera extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo);
         initialize();
-        InputStream is = getResources().openRawResource(R.drawable.image);
-        bmp = BitmapFactory.decodeStream(is);
+
+        bmp = BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher);
     }
 
     private void initialize() {
@@ -56,7 +57,6 @@ public class Camera extends Activity implements View.OnClickListener{
                 i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(i, cameraData);
                 break;
-
         }
     }
 

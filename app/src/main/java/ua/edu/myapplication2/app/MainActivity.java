@@ -20,9 +20,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         counter = 0;
-        add = (Button) findViewById(R.id.badd);
-        sub = (Button) findViewById(R.id.bsub);
-        display = (TextView) findViewById(R.id.tvDisplay);
+        add = (Button) findViewById(R.id.bAddOne);
+        sub = (Button) findViewById(R.id.bSubOme);
+        display = (TextView) findViewById(R.id.tvNumber);
 
 
         add.setOnClickListener(new View.OnClickListener(){
